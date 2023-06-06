@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;  
+}
+
+ul li {
+  float: left;
+  width: 200px;
+  height: 40px;
+  opacity: .8;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+ul li a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: #000;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: block;
+}
+
+ul li a:hover {
+  background-color: rgb(16, 16, 94);
+  border-radius: 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: .5s;
+}
+
+ul li ul li {
+  display: none;
+}
+
+ul li:hover ul li {
+  display: block;
+  transition: 0.3s ease-in;
+}
+
+ .container {
+  width: 1200px;
+  height: 300px;
+  margin-left: 90px;
+}
+
+.container .box {
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: #026bb1;
+  float: left;
+  margin-top: 180px;
+  margin-left: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+} 
+
+.container .box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(23, 3, 199);
+  transition: .5s;
+  z-index: 1;  
+}
+
+.container .box:hover .icon {
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.container .box .icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: .5s;
+  color: #fff;
+}
+
+.container .box .icon svg.stroke {
+  fill: none;
+  stroke-width: .3;
+  stroke: #ffffff;
+}
+
+.container .box .content {
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 100px);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  padding: 20px;
+  transition: .5s;
+  opacity: 0;
+}
+
+.container .box:hover .content {
+  top: 90px;
+  opacity: 1;
+}
+
+.container .box .content h3 {
+  margin: 0 0 10px;
+  color: #0313fc;
+  font-size: 24px;
+}
+
+.container .box .content p {
+  color: #3e464b;
+}
+
+.container .box:nth-child(1) .icon {
+  background: #026bb1;
+}
+
+.container .box:nth-child(1) {
+  background: turquoise;
+}
+
